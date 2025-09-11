@@ -28,15 +28,13 @@ A **Flutter-based UI** project for a modern AI Chatbot app, inspired by this [Dr
 ## 📸 Screenshots
 
 **Main Page / Welcome Screen**  
-![Main Page](demo/screenshots/main_page.png)  
+<img src="demo/screenshots/main_page.png" alt="Main Page" width="400"/>
 
 **Sample Chat Screen**  
-![Chat Screen](demo/screenshots/chat_screen.png)  
+<img src="demo/screenshots/chat_screen.png" alt="Chat Screen" width="400"/>
 
 **Sample Speech To Text Screen**  
-![Speech To Text Screen](demo/screenshots/speech_screen.png)  
-
-
+<img src="demo/screenshots/speech_screen.png" alt="Speech To Text Screen" width="400"/>
 
 ---
 
