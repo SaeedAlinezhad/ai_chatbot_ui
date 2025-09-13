@@ -60,7 +60,7 @@ A **Flutter-based UI** project for a modern AI Chatbot app, inspired by this [Dr
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/saeedsql/ai_chatbot_ui.git
+   git clone https://github.com/SaeedAlinezhad/ai_chatbot_ui.git
    cd ai_chatbot_ui
    ```
 
