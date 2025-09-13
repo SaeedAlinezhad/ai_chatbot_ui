@@ -1,9 +1,8 @@
-// presentation/pages/voice_globe_screen.dart
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:orbix_chat/core/widgets/sphere/animated_obj.dart';
 import 'package:orbix_chat/features/voice_input/presentation/cubit/voice_cubit.dart';
-import '../widgets/animated_obj.dart';
 
 class VoiceInputScreen extends StatefulWidget {
   const VoiceInputScreen({super.key});

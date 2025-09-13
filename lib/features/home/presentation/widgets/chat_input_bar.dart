@@ -9,7 +9,7 @@ import 'package:orbix_chat/injection_container.dart';
 
 class ChatInputBar extends StatefulWidget {
   final void Function(String text, String? imageUrl) onSend;
-  final FocusNode? focusNode; // <-- added
+  final FocusNode? focusNode; 
   const ChatInputBar({required this.onSend, this.focusNode, super.key});
 
   @override
@@ -24,7 +24,6 @@ class _ChatInputBarState extends State<ChatInputBar> {
       widget.onSend(_controller.text, null);
       _controller.clear();
 
-      // Keep the keyboard open
       widget.focusNode?.requestFocus();
     }
   }
@@ -35,7 +34,7 @@ class _ChatInputBarState extends State<ChatInputBar> {
       barrierDismissible: false,
       builder: (_) =>  Dialog(
         backgroundColor: Colors.transparent,
-        insetPadding: EdgeInsets.all(20),
+        insetPadding: const EdgeInsets.all(20),
         child: SizedBox(
           height: 400,
           child: BlocProvider(
@@ -51,7 +50,6 @@ class _ChatInputBarState extends State<ChatInputBar> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        // Camera button
         Material(
           color: const Color.fromARGB(57, 63, 57, 90),
           shape: const CircleBorder(),
@@ -61,7 +59,6 @@ class _ChatInputBarState extends State<ChatInputBar> {
           ),
         ),
         const SizedBox(width: 8),
-        // Input field
         Expanded(
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -71,7 +68,7 @@ class _ChatInputBarState extends State<ChatInputBar> {
             ),
             child: TextField(
               controller: _controller,
-              focusNode: widget.focusNode, // <-- added
+              focusNode: widget.focusNode,
               style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 hintText: 'Type Message',
@@ -93,17 +90,16 @@ class _ChatInputBarState extends State<ChatInputBar> {
           child: IconButton(
             icon: const Icon(Iconsax.microphone_copy, color: Colors.white),
             onPressed: () async {
-              print("sdsd");
-                  context.read<HomeBloc>().add(ToggleVoiceInputEvent(true));
+                  context.read<HomeBloc>().add(const ToggleVoiceInputEvent(true));
               final result = await showVoiceInputDialog(context);
               if (result != null && result.isNotEmpty) {
                 setState(() {
-                  _controller.text = result; // ✅ insert into input box
+                  _controller.text = result;
                   _controller.selection = TextSelection.fromPosition(
                     TextPosition(offset: _controller.text.length),
                   );
                 });
-                widget.focusNode?.requestFocus(); // keep keyboard open
+                widget.focusNode?.requestFocus(); 
               }
             },
           ),

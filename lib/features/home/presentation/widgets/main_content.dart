@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'animated_obj.dart';
+import '../../../../core/widgets/sphere/animated_obj.dart';
 import 'option_card.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
@@ -15,7 +15,7 @@ class MainContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const SizedBox(height: 40),
-          Center(child: Globe3DAnimation(radius: 50)),
+          const Center(child: Globe3DAnimation(radius: 50)),
           const SizedBox(height: 18),
           const Text(
             'Hi, Orbix Studio',

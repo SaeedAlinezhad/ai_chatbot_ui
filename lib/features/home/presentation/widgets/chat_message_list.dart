@@ -8,7 +8,7 @@ class ChatMessageList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (messages.isEmpty) return const SizedBox.shrink();
-    final maxWidth = MediaQuery.of(context).size.width * 0.7; // max 70% of screen
+    final maxWidth = MediaQuery.of(context).size.width * 0.7;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),

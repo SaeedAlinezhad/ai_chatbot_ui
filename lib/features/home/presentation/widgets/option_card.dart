@@ -19,10 +19,10 @@ class OptionCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20), // smaller padding
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
         decoration: BoxDecoration(
           color: const Color.fromARGB(57, 63, 57, 90),
-          borderRadius: BorderRadius.circular(14), // smaller radius
+          borderRadius: BorderRadius.circular(14),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,16 +30,16 @@ class OptionCard extends StatelessWidget {
           children: [
             if (icon != null)
               CircleAvatar(
-                radius: 18, // smaller avatar
+                radius: 18,
                 backgroundColor: Colors.white24,
-                child: Icon(icon, color: Colors.white, size: 20), // smaller icon
+                child: Icon(icon, color: Colors.white, size: 20),
               ),
-            if (icon != null) const SizedBox(height: 8), // less spacing
+            if (icon != null) const SizedBox(height: 8),
             Text(
               title,
               textAlign: TextAlign.start,
               style: const TextStyle(
-                fontSize: 14, // smaller text
+                fontSize: 14, 
                 fontWeight: FontWeight.w600,
                 color: Colors.white,
               ),
@@ -51,7 +51,7 @@ class OptionCard extends StatelessWidget {
               description,
               textAlign: TextAlign.start,
               style: const TextStyle(
-                fontSize: 11, // smaller description
+                fontSize: 11,
                 color: Colors.white70,
               ),
               maxLines: 2,
